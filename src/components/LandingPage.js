@@ -5,10 +5,7 @@ const LandingPage = () => {
   // Use useEffect to load external scripts
   useEffect(() => {
     // Load Binance Widget script
-    const binanceScript = document.createElement('script');
-    binanceScript.src = 'https://public.bnbstatic.com/unpkg/growth-widget/cryptoCurrencyWidget@0.0.13.min.js';
-    binanceScript.async = true;
-    document.body.appendChild(binanceScript);
+    
 
     // Load CoinGecko Widget script
     const coingeckoScript = document.createElement('script');
@@ -18,7 +15,6 @@ const LandingPage = () => {
 
     return () => {
       // Clean up scripts
-      document.body.removeChild(binanceScript);
       document.body.removeChild(coingeckoScript);
     };
   }, []);
@@ -40,17 +36,6 @@ const LandingPage = () => {
         </ul>
       </section>
       
-      {/* Binance Widget Container */}
-      <section className="widget-section">
-        <div className="binance-widget-container">
-          <div className="binance-widget-marquee" 
-               data-cmc-ids="1,1027,1839,5426,3408,52,74,5805,3890,7083,11419,5994" 
-               data-theme="dark" 
-               data-transparent="false" 
-               data-powered-by="Powered by" 
-               data-disclaimer="Disclaimer"></div>
-        </div>
-      </section>
 
       {/* CoinGecko Widget */}
       <section className="widget-section">
