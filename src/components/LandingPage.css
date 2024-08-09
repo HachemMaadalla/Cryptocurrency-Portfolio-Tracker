@@ -1,0 +1,79 @@
+/* src/App.css or src/LandingPage.css */
+
+.landing-page {
+    text-align: center;
+    padding: 00px 0px;
+    background-color: #001f3f;
+    color: #fff;
+  }
+  
+  .landing-header {
+    margin-bottom: 0px;
+  }
+  
+  .landing-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .landing-header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .cta-button:hover {
+    background-color: #33105f;
+  }
+  
+  .features-section {
+    margin: 30px 0;
+  }
+  
+  .features-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .features-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features-section li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .landing-footer {
+    margin-top: 50px;
+  }
+
+  .home-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .home-button:hover {
+    background-color: #044183;
+  }
+  .address-text {
+  font-size: 1em;
+  color: #000000;
+  font-weight: bold;
+}

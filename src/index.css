@@ -10,11 +10,11 @@ body {
 /* Header Styles */
 /* Header Styles */
 header {
-    background-color: #125cab; /* Dark blue background */
+    background-color: #0d4784; /* Dark blue background */
     color: #fff; /* White text color */
-    padding: 10px 0; /* Padding for top and bottom */
+    padding: 20px 0; /* Padding for top and bottom */
     text-align: center; /* Center-aligns text horizontally */
-    margin-top: 50px; /* Adjust this value to set the top margin */
+    margin-top: 30px; /* Adjust this value to set the top margin */
     align-items: flex-end; /* Align items to the bottom */
 }
 
@@ -151,7 +151,7 @@ li:last-child {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #007bff;
+    background-color: #0d4784;
     color: #fff;
 }
 
