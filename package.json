@@ -4,19 +4,37 @@
   "description": "Project Description  \r Features  \r Technologies Used  \r Challenges  \r Contributing  \r License  \r Contact  \r # Project Description\r The Cryptocurrency Portfolio Tracker is a web application that allows users to monitor and manage their cryptocurrency investments. With real-time data integration, users can track the performance of their portfolios, visualize trends, and make informed decisions. The platform is built using modern web technologies including React for the frontend, Node.js for the backend, and MongoDB as the database.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:frontend": "react-scripts start",
+    "start:backend": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.3",
     "bcryptjs": "^2.4.3",
+    "chart.js": "^4.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.2"
+    "mongoose": "^8.5.2",
+    "react-chartjs-2": "^5.2.0",
+    "react-router-dom": "^6.26.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

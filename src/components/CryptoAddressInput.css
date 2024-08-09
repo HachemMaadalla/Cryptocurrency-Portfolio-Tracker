@@ -1,0 +1,41 @@
+.crypto-address-input-container {
+  margin-bottom: 20px; /* Adds space below the input container */
+  padding: 20px; /* Adds padding inside the container */
+  border: 1px solid #ccc; /* Adds a border around the container */
+  border-radius: 8px; /* Rounds the corners of the container */
+  background-color: #fff; /* Sets the background color of the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow to the container */
+}
+
+.crypto-address-input-container h2 {
+  margin-bottom: 10px; /* Adds space below the heading */
+  font-size: 1.5em; /* Increases the font size of the heading */
+}
+
+.crypto-address-input-container form {
+  display: flex; /* Uses flexbox to align items */
+  flex-direction: column; /* Stacks items vertically */
+}
+
+.crypto-address-input-container input[type="text"] {
+  padding: 15px; /* Adds padding inside the input box */
+  margin-bottom: 10px; /* Adds space below the input box */
+  border: 1px solid #ccc; /* Adds a border around the input box */
+  border-radius: 4px; /* Rounds the corners of the input box */
+  font-size: 1em; /* Sets the font size of the input box text */
+  width: 100%; /* Makes the input box full width */
+  max-width: 400px; /* Limits the width of the input box */
+}
+
+.crypto-address-input-container button {
+  padding: 15px 20px; /* Adds padding inside the button */
+  border: none; /* Removes the border of the button */
+  border-radius: 4px; /* Rounds the corners of the button */
+  background-color: #007bff; /* Sets the background color of the button */
+  color: white; /* Sets the text color of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering */
+}
+
+.crypto-address-input-container button:hover {
+  background-color: #0056b3; /* Changes the background color on hover */
+}

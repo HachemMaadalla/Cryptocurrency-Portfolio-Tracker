@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptocurrency Portfolio Tracker</title>
+        <link rel="stylesheet" href="%PUBLIC_URL%/index.css"> <!-- Link to global styles -->
+        <style>
+            body {
+                padding-top: 200px; /* Adjust the value to your liking */
+            }
+        </style>
+    </head>
+    
+<body>
+    <!-- Binance Widget -->
+    <!-- Binance Widget Container -->
+    <div class="binance-widget-container">
+    <script src="https://public.bnbstatic.com/unpkg/growth-widget/cryptoCurrencyWidget@0.0.13.min.js"></script>
+    <div class="binance-widget-marquee" data-cmc-ids="1,1027,1839,5426,3408,52,74,5805,3890,7083,11419,5994" data-theme="dark" data-transparent="false" data-powered-by="Powered by" data-disclaimer="Disclaimer"></div>
+    </div>
+
+
+    <!-- CoinGecko Widget -->
+    <script src="https://widgets.coingecko.com/gecko-coin-price-chart-widget.js"></script>
+
+    <!-- Static Content -->
+    <header>
+        <h1>Cryptocurrency Portfolio Tracker</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Welcome to Your Portfolio Tracker</h2>
+            <p>
+                This web application allows you to monitor and manage your cryptocurrency investments. 
+                Track the performance of your portfolios, visualize trends, and make informed decisions.
+            </p>
+            <p>
+                Built using modern technologies including React, Node.js, and MongoDB.
+            </p>
+
+            <!-- React App will render here -->
+            <div id="root"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cryptocurrency Portfolio Tracker</p>
+    </footer>
+</body>
+</html>
