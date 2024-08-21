@@ -36,3 +36,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 # Contact
 Made by Hachem Maadalla. If you have any questions or feedback, feel free to reach out!
 
+# Run the tracker
+dowload the zip file
+extract it
+in your terminal make sure you are in the right repository and type npm run start:tracker
