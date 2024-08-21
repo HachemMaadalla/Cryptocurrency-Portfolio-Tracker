@@ -56,6 +56,7 @@ const PortfolioTracker = () => {
       return 0;
     }
   };
+  
 
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -76,7 +77,17 @@ const PortfolioTracker = () => {
     setBnbValue(null);
 
     console.log('Fetching data for address:', address);
+    const ethPriceInUSD_1d = await fetchHistoricalPriceInUSD('ETH', 1);
+      const ethPriceInUSD_1w = await fetchHistoricalPriceInUSD('ETH', 7);
+      const ethPriceInUSD_1m = await fetchHistoricalPriceInUSD('ETH', 30);
 
+      const maticPriceInUSD_1d = await fetchHistoricalPriceInUSD('MATIC', 1);
+      const maticPriceInUSD_1w = await fetchHistoricalPriceInUSD('MATIC', 7);
+      const maticPriceInUSD_1m = await fetchHistoricalPriceInUSD('MATIC', 30);
+
+      const bnbPriceInUSD_1d = await fetchHistoricalPriceInUSD('BNB', 1);
+      const bnbPriceInUSD_1w = await fetchHistoricalPriceInUSD('BNB', 7);
+      const bnbPriceInUSD_1m = await fetchHistoricalPriceInUSD('BNB', 30);
     try {
       // Etherscan API for ETH
       const ethResponse = await axios.get('https://api.etherscan.io/api', {
@@ -151,17 +162,6 @@ const PortfolioTracker = () => {
       }
 
       // Fetch historical prices
-      const ethPriceInUSD_1d = await fetchHistoricalPriceInUSD('ETH', 1);
-      const ethPriceInUSD_1w = await fetchHistoricalPriceInUSD('ETH', 7);
-      const ethPriceInUSD_1m = await fetchHistoricalPriceInUSD('ETH', 30);
-
-      const maticPriceInUSD_1d = await fetchHistoricalPriceInUSD('MATIC', 1);
-      const maticPriceInUSD_1w = await fetchHistoricalPriceInUSD('MATIC', 7);
-      const maticPriceInUSD_1m = await fetchHistoricalPriceInUSD('MATIC', 30);
-
-      const bnbPriceInUSD_1d = await fetchHistoricalPriceInUSD('BNB', 1);
-      const bnbPriceInUSD_1w = await fetchHistoricalPriceInUSD('BNB', 7);
-      const bnbPriceInUSD_1m = await fetchHistoricalPriceInUSD('BNB', 30);
 
       // Calculate historical portfolio values
       const totalValue_1d = (ethBalance * ethPriceInUSD_1d) + (maticBalance * maticPriceInUSD_1d) + (bnbBalance * bnbPriceInUSD_1d);
@@ -196,7 +196,7 @@ const PortfolioTracker = () => {
 
   const handleRefresh = () => {
     if (address) {
-      setRefreshTimer(10); // Set timer to 10 seconds
+      setRefreshTimer(1); // Set timer to 1 seconds
       const interval = setInterval(() => {
         setRefreshTimer(prev => {
           if (prev <= 1) {
@@ -220,7 +220,6 @@ const PortfolioTracker = () => {
           {/* Home Button and Address Text */}
           <div className="home-button-container">
             <Link to="/" className="home-button">Home</Link>
-            <span className="address-text">Use this for example: 0x98c1803Ff7AB06224B0042C191e7cE45DA3307d3</span>
           </div>
 
           <CryptoAddressInput onSubmit={handleAddressSubmit} />
@@ -260,12 +259,13 @@ const PortfolioTracker = () => {
           </div>
           {historicalValues.day !== null && totalValue > 0 && (
             <div className="historical-chart-container">
-              <div className="historical-values">
-                <h2>Historical Portfolio Values</h2>
-                <p>1 Day Ago: ${historicalValues.day.toFixed(2)}</p>
-                <p>1 Week Ago: ${historicalValues.week.toFixed(2)}</p>
-                <p>1 Month Ago: ${historicalValues.month.toFixed(2)}</p>
-              </div>
+            <div className="historical-values">
+              <h2>Historical Portfolio Values</h2>
+              <h2>Click on Refresh To Display</h2>
+              <p>1 Day Ago: ${historicalValues.day.toFixed(2)}</p>
+              <p>1 Week Ago: ${historicalValues.week.toFixed(2)}</p>
+              <p>1 Month Ago: ${historicalValues.month.toFixed(2)}</p>
+            </div>
               <div className="chart-container">
                 <PieChart 
                   data={[
